@@ -8,6 +8,11 @@ function App() {
      <MyComponent text={'asdasd'}/>
      <MyComponent text={'qweqweqwe'}/>
      <MyComponent text={'Hello'} />
+        <ul>
+            <li>asd</li>
+            <li>asd</li>
+            <li>asd</li>
+        </ul>
         {/*{*/}
         {/*    MyComponent({text:"Hello from MyComponent"})*/}
         {/*}*/}
