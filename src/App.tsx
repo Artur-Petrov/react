@@ -5,19 +5,21 @@ function App() {
 
   return (
     <>
-     <MyComponent text={'asdasd'}/>
-     <MyComponent text={'qweqweqwe'}/>
-     <MyComponent text={'Hello'} />
+     <MyComponent title={'Header 1'}>
+            Lorem ipsum dolor sit.
+         </MyComponent>
+     <MyComponent title={'Header 2'}/>
+     <MyComponent title={'Header 3'}/>
         <ul>
             <li>asd</li>
             <li>asd</li>
             <li>asd</li>
         </ul>
-        {/*{*/}
-        {/*    MyComponent({text:"Hello from MyComponent"})*/}
-        {/*}*/}
+        {
+            MyComponent({title:"Hello from MyComponent"})
+        }
     </>
   )
 }
 
-export default App
+export default App;
