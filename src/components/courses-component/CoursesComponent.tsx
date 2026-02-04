@@ -1,6 +1,7 @@
 import {coursesAndDurationArray} from "../../Array.ts";
 import type {CourseModel} from "../../models/CourseModel.ts";
 import CourseComponent from "../course-component/CourseComponent.tsx";
+import "./CoursesComponentStyle.css"
 
 export const CoursesComponent = () => {
 

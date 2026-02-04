@@ -1,5 +1,6 @@
 import type {FC} from "react";
 import type {CourseModel} from "../../models/CourseModel.ts";
+import "./CourseComponentStyle.css"
 
 type PropsType = {
     course: CourseModel;
