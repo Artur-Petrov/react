@@ -6,23 +6,28 @@ import {getUsers} from "../../services/api.service.ts";
 
 export const UsersComponent = () => {
     const [users, setUsers] = useState<IUser[]>([]);
-    // useEffect має два аргументи 1 - callback функцію і 2 - масив залежностей
-
+    const [item, setItem] = useState<IUser | null>(null);
     useEffect(() => {
         getUsers()
             .then((response) => {
                 setUsers(response);
             });
-        // useEffect відповідно має return (unsubscribe function) яка є callback
         return()=>{
             console.log('done');
         }
     }, [])
-    // якщо масив пустий [] то useEffect виконається тільки 1 раз
+
+    const foo = (item: IUser) => {
+        setItem(item);
+    }
+
     return (
         <div>
             {
-                users.map((user) => (<UserComponent key={user.id} item={user}/>))
+                item && <div>JSON.stringify(item)</div>
+            }
+            {
+                users.map((user) => (<UserComponent foo={foo} key={user.id} item={user}/>))
             }
         </div>
     );
