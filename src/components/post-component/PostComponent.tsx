@@ -8,11 +8,25 @@ type PostModelProp = {
 export const PostComponent: FC<PostModelProp> = ({post}) => {
 
     return (
-        <div>
+        <div className='bg-sky-600 m-4 p-4 rounded-2xl'>
             <div>Post title: {post.title}</div>
             <div>Main part: {post.body}</div>
             <div>User ID: {post.userId}</div>
             <div>ID: {post.id}</div>
+            <div>Views: {post.views}</div>
+
+            <div>
+                <div>Tags: {post.tags.map((tag: string) => (
+                    <div>
+                        {tag}
+                    </div>
+                ))}</div>
+            </div>
+
+            <div>
+                <div>Likes: {post.reactions.likes}</div>
+                <div>Dislikes: {post.reactions.dislikes}</div>
+            </div>
         </div>
     );
 };
