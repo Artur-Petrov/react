@@ -7,13 +7,15 @@ type CommentPropType ={
 
 export const CommentComponent: FC<CommentPropType> = ({comment}) => {
     return (
-        <div>
-            <h1>{comment.name}</h1>
-            <h3>{comment.email}</h3>
-            <div>{comment.body}</div>
+        <div className='bg-sky-600 m-5 p-5 rounded-2xl'>
+            <h1>{comment.id}</h1>
+            <h3>{comment.body}</h3>
+            <div>{comment.postId}</div>
+            <div>{comment.likes}</div>
             <div>
-                <div>{comment.postId}</div>
-                <div>{comment.id}</div>
+                <div>{comment.user.id}</div>
+                <div>{comment.user.fullName}</div>
+                <div>{comment.user.username}</div>
             </div>
         </div>
     );

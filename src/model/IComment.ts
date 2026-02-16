@@ -1,7 +1,12 @@
 export interface IComment {
-    postId: number,
     id: number,
-    name: string,
-    email: string,
-    body: string
+    body: string,
+    postId: number,
+    likes: number,
+    user: ICommentsUser
+}
+export interface ICommentsUser {
+    id: number,
+    username: string,
+    fullName: string
 }
