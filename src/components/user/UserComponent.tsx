@@ -12,7 +12,7 @@ const UserComponent: FC<UserPropType> = ({item}) => {
 
 
     const handleOnClick = ()=>{
-        navigateFunction('details', {state:item})
+        navigateFunction('posts/' + item.id, {state:item})
     };
     return (
         <div>
