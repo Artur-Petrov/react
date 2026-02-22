@@ -1,6 +1,6 @@
 import UsersJsonComponent from "../components/users/UsersJsonComponent.tsx";
 
-const UsersJsonPlaceHolder = () => {
+const UsersJsonPlaceHolderPage = () => {
     return (
         <div>
             <UsersJsonComponent/>
@@ -8,4 +8,4 @@ const UsersJsonPlaceHolder = () => {
     );
 };
 
-export default UsersJsonPlaceHolder;
+export default UsersJsonPlaceHolderPage;

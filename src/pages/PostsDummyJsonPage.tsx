@@ -1,4 +1,4 @@
-const PostsDummyJson = () => {
+const PostsDummyJsonPage = () => {
     return (
         <div>
             PostsDummyJson
@@ -6,4 +6,4 @@ const PostsDummyJson = () => {
     );
 };
 
-export default PostsDummyJson;
+export default PostsDummyJsonPage;

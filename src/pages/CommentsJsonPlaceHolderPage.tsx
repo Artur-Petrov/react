@@ -1,4 +1,4 @@
-const CommentsJsonPlaceHolder = () => {
+const CommentsJsonPlaceHolderPage = () => {
     return (
         <div>
             CommentsJsonPlaceHolder
@@ -6,4 +6,4 @@ const CommentsJsonPlaceHolder = () => {
     );
 };
 
-export default CommentsJsonPlaceHolder;
+export default CommentsJsonPlaceHolderPage;

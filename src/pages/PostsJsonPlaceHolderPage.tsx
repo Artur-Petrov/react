@@ -1,4 +1,4 @@
-const PostsJsonPlaceHolder = () => {
+const PostsJsonPlaceHolderPage = () => {
     return (
         <div>
             PostsJsonPlaceHolder
@@ -6,4 +6,4 @@ const PostsJsonPlaceHolder = () => {
     );
 };
 
-export default PostsJsonPlaceHolder;
+export default PostsJsonPlaceHolderPage;
