@@ -1,7 +1,9 @@
+import UsersJsonComponent from "../components/users/UsersJsonComponent.tsx";
+
 const UsersJsonPlaceHolder = () => {
     return (
         <div>
-            Users Json
+            <UsersJsonComponent/>
         </div>
     );
 };

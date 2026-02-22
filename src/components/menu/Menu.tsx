@@ -24,6 +24,7 @@ const Menu = () => {
                     Comments
                     <ul>
                         <li><Link to={'comments/jsonplaceholder'}>JsonPlaceHolder</Link></li>
+                        <li><Link to={'comments/dummyjson'}>DummyJson</Link></li>
                     </ul>
                 </li>
             </ul>
