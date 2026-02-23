@@ -9,7 +9,7 @@ export const UsersJsonComponent = () => {
     useEffect(() => {
         UserService.getUserJson()
             .then(users => setUsers(users));
-    })
+    },[])
 
     return (
         <div>

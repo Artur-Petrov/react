@@ -9,7 +9,7 @@ const UsersDummyComponent = () => {
     useEffect(() => {
         UserService.getUserDummy()
             .then(users => setUsers(users))
-    })
+    }, [])
 
     return (
         <div>

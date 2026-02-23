@@ -2,6 +2,8 @@ import type {IUser} from "../models/UsersJsonPlaceHolder/IUser.ts";
 import type {IUserResponse} from "../models/UsersDummyJson/response-model/IUserResponse.ts";
 import type {IUserDummy} from "../models/UsersDummyJson/IUserDummy.ts";
 import type {IPosts} from "../models/PostsJsonPlaceHolder/IPosts.ts";
+import type {IPostsDummy} from "../models/PostsDummyJson/IPostsDummy.ts";
+import type {IPostsResponse} from "../models/PostsDummyJson/response-model/IPostsResponse.ts";
 
 export const UserService = {
 
@@ -11,15 +13,20 @@ export const UserService = {
     },
 
     getUserDummy: async (): Promise<IUserDummy[]> => {
-       const userDummyResponse: IUserResponse =  await fetch(import.meta.env.VITE_DUMMY_API + '/users')
+        const userDummyResponse: IUserResponse = await fetch(import.meta.env.VITE_DUMMY_API + '/users')
             .then((response) => response.json())
-            return userDummyResponse.users;
+        return userDummyResponse.users;
     }
 }
 
 export const PostService = {
-    getPostsJson: async():Promise<IPosts[]>=>{
+    getPostsJson: async (): Promise<IPosts[]> => {
         return await fetch(import.meta.env.VITE_JSON_API + '/posts')
             .then((response) => response.json())
+    },
+    getPostsDummy: async (): Promise<IPostsDummy[]> => {
+        const postsDummyResponse: IPostsResponse = await fetch(import.meta.env.VITE_DUMMY_API + '/posts')
+            .then((response) => response.json())
+        return postsDummyResponse.posts
     }
 }

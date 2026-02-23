@@ -1,7 +1,9 @@
+import PostsDummyComponent from "../components/posts/PostsDummyComponent.tsx";
+
 const PostsDummyJsonPage = () => {
     return (
         <div>
-            PostsDummyJson
+            <PostsDummyComponent/>
         </div>
     );
 };

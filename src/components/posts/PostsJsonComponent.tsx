@@ -9,7 +9,7 @@ const PostsJsonComponent = () => {
     useEffect(() => {
         PostService.getPostsJson()
             .then(posts => setPosts(posts))
-    })
+    },[])
     return (
         <div>
             {
