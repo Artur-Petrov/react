@@ -1,7 +1,9 @@
+import CommentsJsonComponent from "../components/comments/CommentsJsonComponent.tsx";
+
 const CommentsJsonPlaceHolderPage = () => {
     return (
         <div>
-            CommentsJsonPlaceHolder
+            <CommentsJsonComponent/>
         </div>
     );
 };

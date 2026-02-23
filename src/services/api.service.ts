@@ -4,6 +4,7 @@ import type {IUserDummy} from "../models/UsersDummyJson/IUserDummy.ts";
 import type {IPosts} from "../models/PostsJsonPlaceHolder/IPosts.ts";
 import type {IPostsDummy} from "../models/PostsDummyJson/IPostsDummy.ts";
 import type {IPostsResponse} from "../models/PostsDummyJson/response-model/IPostsResponse.ts";
+import type {IComment} from "../models/CommentsJsonPlaceHolder/IComment.ts";
 
 export const UserService = {
 
@@ -28,5 +29,13 @@ export const PostService = {
         const postsDummyResponse: IPostsResponse = await fetch(import.meta.env.VITE_DUMMY_API + '/posts')
             .then((response) => response.json())
         return postsDummyResponse.posts
+    }
+}
+
+export const CommentService = {
+    getCommentsJson: async ():Promise<IComment[]>=>{
+        return await fetch(import.meta.env.VITE_JSON_API + '/comments')
+            .then((response) => response.json())
+
     }
 }
