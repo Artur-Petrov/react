@@ -9,7 +9,7 @@ const CommentsJsonComponent = () => {
     useEffect(() => {
         CommentService.getCommentsJson()
             .then(comments => setComments(comments));
-    })
+    }, [])
     return (
         <div>
             {
