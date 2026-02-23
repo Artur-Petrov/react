@@ -1,7 +1,9 @@
+import PostsJsonComponent from "../components/posts/PostsJsonComponent.tsx";
+
 const PostsJsonPlaceHolderPage = () => {
     return (
         <div>
-            PostsJsonPlaceHolder
+            <PostsJsonComponent/>
         </div>
     );
 };
