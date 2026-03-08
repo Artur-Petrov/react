@@ -1,6 +1,16 @@
 import {createBrowserRouter} from "react-router-dom";
-import App from "../App.tsx";
+import MainLayout from "../layouts/MainLayout.tsx";
+import PaginationLayout from "../layouts/PaginationLayout.tsx";
+import UsersPage from "../pages/UsersPage.tsx";
 
 export const routes = createBrowserRouter([
-    {path:'/', element:<App/>},
-]);
+    {
+        path: '/', element: <MainLayout/>, children: [
+            {
+                path: '', element: <PaginationLayout/>, children: [
+                    {path: 'users', element: <UsersPage/>}
+                ]
+            }
+        ]
+    }
+])
