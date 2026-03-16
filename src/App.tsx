@@ -1,16 +1,20 @@
 import './App.css'
-import FormComponent from "./component/FormComponent.tsx";
+import {useEffect} from "react";
+import {getAllUsers, saveUser} from "./service/user.service.ts";
 
 function App() {
 
+    useEffect(() => {
+        getAllUsers()
+            .then(value => console.log(value));
+
+        saveUser({id: 1, name: "John", email: "john@gmail.com"})
+            .then(user => console.log(user));
+    }, []);
+
     return (
-        <>
-            {/*<div contentEditable={true}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos in quos*/}
-            {/*    rem sequi ut? Accusantium cupiditate ipsa ipsam iste minus odio provident quidem reprehenderit soluta*/}
-            {/*    tempora. Et, facere hic! Soluta.*/}
-            {/*</div>*/}
-            <FormComponent/>
-        </>
+        <></>
+
     )
 }
 
