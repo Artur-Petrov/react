@@ -1,11 +1,16 @@
 import {useEffect} from "react";
-import {loadAuthProducts} from "../services/service.api.ts";
+import {loadAuthProducts, refresh} from "../services/service.api.ts";
 
 const AuthResourcesPage = () => {
 
     useEffect(() => {
         loadAuthProducts().then(products => {
             console.log(products);
+        }).catch(reason => {
+            console.log(reason);
+            refresh()
+                .then( () => loadAuthProducts())
+                .then(value => console.log(value));
         })
     }, []);
 
